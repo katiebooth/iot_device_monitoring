@@ -2,7 +2,7 @@ import { timingSafeEqual } from "crypto";
 import { Request, Response, NextFunction } from "express"
 import apiConfig from "../config";
 
-// basic authorisation mechanism to ensure only client can make requests to server
+// basic authorisation mechanism to ensure only known client can make requests to server
 // this should be extended to check JWTs match a user-specific session
 const authoriseToken = async(req: Request, res: Response, next: NextFunction) => {
     const authHeader = req.headers.authorization;

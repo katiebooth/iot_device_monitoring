@@ -5,10 +5,10 @@ import apiConfig from "../config";
 
 export const getAllDevices = async (req: Request<DeviceRequestQuery, unknown, unknown>, res: Response) => {
   try {
-    // the data would be fetched from a database "READ" query
-    // this type assignment would be done using a generic in a database handler
+    // in practice, the data would be fetched from a database "READ" query
     // assuming data volume is low, return all devices
     // pagination may be used if number of devices is large & database query to fetch is complex
+    // this type assignment would be done using a generic in a database handler
     const allDevices: DeviceRecord[] = await loadJson(apiConfig.filePath);
     res.json(allDevices);
   } catch (error: unknown) {
