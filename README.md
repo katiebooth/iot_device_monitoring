@@ -1,10 +1,10 @@
-Device Monitoring API
+**Device Monitoring API**
 
 A node.js and Tyepscript Server for retrieving device information - either all devices or by device ID.
 Uses Bearer token authorisation mechanism.
 Currently reads data from json in file system - could be extended to read from database.
 
-Set Up
+**Set Up**
 
 Install Dependencies
 
@@ -18,15 +18,14 @@ Build the Project
 
 npm run build
 
-
-Running the project
+**Running the project**
 
 1. Get information for all devices
 GET request to /internal/devices
 2. Get information for a specific device
 GET request to /internal/devices/:device_id
 
-Authentication:
+**Authentication**
 
 Include a Bearer token in the request headers:
 
