@@ -1,4 +1,5 @@
 import express from "express";
+import { getAllDevices, getDeviceById } from "../Controllers/DeviceController";
 
 const router = express.Router();
 

@@ -14,5 +14,5 @@ process.on('unhandledRejection', (reason, promise) => {
 const port = apiConfig.port;
 
 app.listen(port, () => {
-      console.log(`Listening on port ${port} 🚀🚀🚀`);
+  console.log(`Listening on port ${port} 🚀🚀🚀`);
 });

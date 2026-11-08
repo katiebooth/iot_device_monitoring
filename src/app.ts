@@ -1,13 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import routes from './Routers';
-import routesInternal from './routesInternal';
-import authorise from './Middleware';
+import authorise from './Middleware/AuthoriseMiddleware';
 
 const app = express();
 
 app.use(cors());
 
-app.get('/internal', authorise, routes);
+app.use('/internal', authorise, routes); 
 
 export default app;
